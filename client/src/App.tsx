@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import PageLayout from "./components/PageLayout";
+import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -30,6 +31,11 @@ const App = () => {
         {
           path: "/profile",
           element: <Profile />,
+        },
+
+        {
+          path: "*",
+          element: <PageNotFound />,
         },
       ],
     },
